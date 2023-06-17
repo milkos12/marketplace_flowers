@@ -73,64 +73,65 @@ input {
 
 .grid-menu .promotion {
     display: flex;
-    height: 70%;
-    width: 100%;
-    margin: 180px 50px 0 0;
-    padding: 0 40px 0 40px;
+    position: relative;
+    z-index: -1;
+    min-width: 70%;
+    height: 200px;
+    margin: 190px 90px 0 110px;
+
     flex-direction: column;
     border-radius: 25px;
-    background-color: #F4F6F7;
+    
     transition: background-color 0.6s, height 0.6s, with 0.6s;
+    width: max-content;
 
 }
 
 .grid-menu {
+    position: relative;
+    z-index: 1;
     display: flex;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0 30px 0 30px;
+    overflow: hidden;
+    height: 100%;
+    width: 50%;
+    background-color: none;
+    transition: height 0.6s, width 0.6s, background-color 0.6s;
     
-    margin-top: 100px;
-    margin-left: 50px;
-    overflow-y: hidden;
-    overflow-x: 100%;
-    height: 80%;
-    
+}
 
-
-
+.grid-menu::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
 }
 
 .grid-menu .promotion .img {
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: 150px;
+    bottom: 200px;
     height: auto;
 }
 
 .promotion .img img {
-    width: 45%;
+    width: 40%;
+    transition: width 0.6s;
 
 }
-
-.promotion .title {
-    margin-top: -100px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: first;
-    color: #979A9A;
-}
-
-.description {
-    color: #CACFD2;
-}
-
 
 .grid-menu .promotion:hover {
-    background-color: #008663;
-    height: 60%;
-    width: 150%;
-    box-shadow: 9px 11px 95px 21px rgba(0, 0, 0, 0.53);
-    transition: background-color 0.6s, height 0.6s, width 0.6s, box-shadow 0.6s;
+    background-color: white;
+    height: 0%;
+    width: 0%;
+    
+    transition: background-color 0.3s, height 0.6s, width 0.6s, box-shadow 0.6s;
 
+}
+.grid-menu .promotion:hover .img img{
+    width: 43%;
+    transition: width 0.6s;
 }
 
 .grid-menu .promotion:hover .title {
@@ -138,9 +139,6 @@ input {
     transition: color 0.6s;
 }
 
-.grid-menu .promotion:hover .description {
-    display: none;
-}
 
 .grid-menu .promotion:hover .buy {
     display: block;
@@ -152,10 +150,30 @@ input {
     color: #BFC9CA;
 }
 
-.buy {
+.grid-menu .promotion:hover .title h4 {
     display: none;
-    opacity: 0;
 }
+
+.buy {
+    display:none;
+}
+.grid-menu .promotion:hover .buy {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+    color: #FFFF;
+    background-color: #008663;
+    border: #008663;
+    box-shadow: 2px 0px 46px -21px rgba(0,0,0,0.75);
+    transition: display 0.6s, height 0.6s, width 0.6s;
+    
+    
+}
+
+
 
 .buy h2 {
     color: #EEEEEE;
@@ -165,3 +183,57 @@ input {
     z-index: -1;
     width: 250%;
 }
+
+.percent {
+    margin: 0 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.percent div p{
+    margin-top: 0;
+    font-size: 10px;
+}
+
+.percent div {
+    text-align: center;
+    margin-right: 3px;
+    color: #BFC9CA;
+}
+
+.description {
+    margin-top: -265px;
+    margin-left: 10px;
+}
+
+.promotion .title {
+    margin-top: -15px;
+    color: #979A9A;
+}
+
+.amout-buy {
+    border: 1px #008663 solid;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #008663;
+    color: #FFFF;
+    position: absolute;
+}
+
+.buttom-amount-buy {
+    margin-left: 20%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.title h4 {
+    margin-top: -20px;
+    color: #008663;
+}
+
+
