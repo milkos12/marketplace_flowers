@@ -88,6 +88,7 @@ input {
 }
 
 .grid-menu {
+    z-index: 10;
     position: relative;
     display: flex;
     margin-top: 0;
@@ -238,16 +239,17 @@ input {
 }
 
 .next {
+    z-index: 11;
     position: relative;
     margin-top: -30%;
-    margin-left: 65%;
+    margin-left: 45%;
 }
 
 .back {
-   
+   z-index: 11;
     display: inline-block;
     margin-top: -1%;
-    margin-left: 1%;
+    margin-left: 5%;
     position: relative;
     
 }
