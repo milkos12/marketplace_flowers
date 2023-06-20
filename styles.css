@@ -89,7 +89,6 @@ input {
 
 .grid-menu {
     position: relative;
-    z-index: 1;
     display: flex;
     margin-top: 0;
     margin-left: 0;
@@ -139,13 +138,6 @@ input {
     transition: color 0.6s;
 }
 
-
-.grid-menu .promotion:hover .buy {
-    display: block;
-    opacity: 10;
-    transition: opacity 0.6s;
-}
-
 .grid-menu .promotion:hover .title {
     color: #BFC9CA;
 }
@@ -155,11 +147,22 @@ input {
 }
 
 .buy {
-    display:none;
+    margin-top: -15px;
+    margin-left: -10;
+    padding: 10px;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+    color: #666666;
+    background-color: #FFF;
+    border: #008663;
+    transition: display 0.6s, height 0.6s, width 0.6s, margin-left 0.6s;  
+    
 }
-.grid-menu .promotion:hover .buy {
-    display: block;
-    margin-top: 15px;
+
+.grid-menu .promotion:hover .buy{
+    
+    margin-left: 0;
     padding: 10px;
     border-radius: 30px;
     font-family: 'Roboto', sans-serif;
@@ -167,10 +170,8 @@ input {
     color: #FFFF;
     background-color: #008663;
     border: #008663;
-    box-shadow: 2px 0px 46px -21px rgba(0,0,0,0.75);
-    transition: display 0.6s, height 0.6s, width 0.6s;
-    
-    
+    box-shadow: 3px 0px 59px 9px rgba(0,0,0,0.75);
+    transition: display 0.6s, height 0.6s, width 0.6s, color 0.6s, margin-left 0.6s, box-shadow 0.6s;  
 }
 
 
@@ -235,5 +236,22 @@ input {
     margin-top: -20px;
     color: #008663;
 }
+
+.next {
+    position: relative;
+    margin-top: -30%;
+    margin-left: 65%;
+}
+
+.back {
+   
+    display: inline-block;
+    margin-top: -1%;
+    margin-left: 1%;
+    position: relative;
+    
+}
+
+
 
 
