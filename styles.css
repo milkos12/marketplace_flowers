@@ -155,8 +155,7 @@ input {
     padding: 10px;
     border-radius: 30px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 1000;
-    color: #666666;
+    color: #979A9A;
     background-color: #FFF;
     border: #008663;
     transition: display 0.6s, height 0.6s, width 0.6s, margin-left 0.6s;  
@@ -250,6 +249,19 @@ input {
    
 }
 
+@keyframes move_produc {
+    0% , 20%{
+        transform: translateX(0rem);
+        animation-play-state: paused;
+    }
+    0%, 20% {
+        transform: translateX(-30rem);
+        animation-play-state: paused;
+    }
+
+
+}
+
 .slider {
     margin-left: 5%;
     display: flex;
@@ -266,6 +278,9 @@ input {
     scroll-snap-align: start;
 }
 
+
+
+
 .slider-nav{
     display: flex;
     column-gap: 1rem;
@@ -274,6 +289,7 @@ input {
     left: 20%;
     transform: translateX(-50%);
     z-index: 11;
+    
 }
 
 .slider-nav a{
@@ -289,3 +305,4 @@ input {
     background-color: #008663;
     transition: box-shadow 0.6s, background-color 0.6s;
 }
+
